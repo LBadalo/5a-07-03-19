@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        <!-- Isto é uma hipótese linha de comentário-->
+        @*outra linha de comentário*@
+
+        @* Formulário para perguntar aos utilizadores
+        -Nome
+        -Idade
+        e depois fazer aparecer essa informação no ecrã
+        *@
+
+        <h2>O meu formulário maravilhoso coração...</h2>
+
+        <form method="post">
+            Qual o seu nome? <br />
+            <input type="text" name="nome" required="required" /> <br />
+            Qual a sua idade?<br />
+            <input type="number" name="idade" @*required="required" max="130" min="0"*@/><br />
+            <input type="submit" value="Enviar dados" />
+
+
+        </form>
+
+
+        @if (ViewBag.msg != "")
+        {
+            //este IF garante que o ALERT apenas aparece se a 'resposta' tiver algum conteúdo
+            <text>
+                <script>
+            alert("@ViewBag.msg");
+                </script>
+            </text>
+        }
+
+    </div>
+</body>
+</html>
